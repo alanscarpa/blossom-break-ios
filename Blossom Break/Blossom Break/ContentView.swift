@@ -10,8 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        GeometryReader { geometry in
+            Text("Take a break").frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+        }
     }
 }
 
